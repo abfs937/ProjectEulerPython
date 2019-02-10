@@ -3,11 +3,12 @@
 # What is the 10 001st prime number?
 
 from sympy import sieve
+import sys
 
-a = [i for i in sieve.primerange(1, 1000000)]
+a = [i for i in sieve.primerange(1, 100000)]
 try:
     print(a[10000])
 except IndexError:
-    print('list index out of range')
+    print(sys.exc_info()[:2])
 
 
