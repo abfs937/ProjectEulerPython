@@ -5,9 +5,9 @@
 from sympy import sieve
 import sys
 
-a = [i for i in sieve.primerange(1, 100000)]
+a = [i for i in sieve.primerange(1, 1000000)]
 try:
-    print(a[10000])
+    print('the 10001st prime number is', a[10000])
 except IndexError:
     print(sys.exc_info()[:2])
 
